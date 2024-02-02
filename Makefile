@@ -7,3 +7,6 @@ sam-build:
 
 sam-run:
 	sam local invoke HelloGopher -e ./local/event.json
+
+sam-debug:
+	sam local invoke HelloGopher -e ./local/event.json -d 8099 --debugger-path=$(GOPATH)/bin --debug-args="-delveAPI=2"
